@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satellite Communication Systems — Research Paper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP HEADER NAV -->
+  <header class="top-header">
+    <div class="header-inner">
+      <a class="header-logo" href="#home">
+        <div class="logo-mark">SC</div>
+        <div class="logo-label">
+          SatComm Research
+          <span>LEO · MEO · GEO</span>
+        </div>
+      </a>
+
+      <nav class="top-nav">
+        <a href="#home" class="nav-link active" data-section="home"><span class="nav-icon">⌂</span> Home</a>
+        <a href="#introduction" class="nav-link" data-section="introduction"><span class="nav-icon">①</span> Introduction</a>
+        <a href="#technical" class="nav-link" data-section="technical"><span class="nav-icon">②</span> Technical</a>
+        <a href="#hts" class="nav-link" data-section="hts"><span class="nav-icon">③</span> HTS</a>
+        <a href="#comparison" class="nav-link" data-section="comparison"><span class="nav-icon">④</span> Comparative</a>
+        <a href="#challenges" class="nav-link" data-section="challenges"><span class="nav-icon">⑤</span> Challenges</a>
+        <a href="#future" class="nav-link" data-section="future"><span class="nav-icon">⑥</span> Future</a>
+        <div class="nav-divider-v"></div>
+        <a href="#about" class="nav-link" data-section="about"><span class="nav-icon">◉</span> About</a>
+        <a href="#acknowledgements" class="nav-link" data-section="acknowledgements"><span class="nav-icon">✦</span> Ack.</a>
+        <a href="#references" class="nav-link" data-section="references"><span class="nav-icon">⑦</span> Refs.</a>
+        
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#home" class="nav-link active" data-section="home"><span class="nav-icon">⌂</span> Home</a>
+      <a href="#introduction" class="nav-link" data-section="introduction"><span class="nav-icon">①</span> Introduction</a>
+      <a href="#technical" class="nav-link" data-section="technical"><span class="nav-icon">②</span> Technical Principles</a>
+      <a href="#hts" class="nav-link" data-section="hts"><span class="nav-icon">③</span> HTS & Beamforming</a>
+      <a href="#comparison" class="nav-link" data-section="comparison"><span class="nav-icon">④</span> Comparative Analysis</a>
+      <a href="#challenges" class="nav-link" data-section="challenges"><span class="nav-icon">⑤</span> Critical Challenges</a>
+      <a href="#future" class="nav-link" data-section="future"><span class="nav-icon">⑥</span> Future Trends</a>
+      <a href="#about" class="nav-link" data-section="about"><span class="nav-icon">◉</span> About</a>
+      <a href="#acknowledgements" class="nav-link" data-section="acknowledgements"><span class="nav-icon">✦</span> Acknowledgements</a>
+      <a href="#references" class="nav-link" data-section="references"><span class="nav-icon">⑦</span> References</a>
+      
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HOME -->
+    <section id="home" class="section section-hero active-section">
+      <div class="hero-left">
+        <p class="hero-label">Data Communication Systems · Research Assignment</p>
+        <h1 class="hero-title">Satellite<br><em>Communication</em><br><span class="silver">Systems</span></h1>
+        <p class="hero-subtitle">From orbital mechanics and spectral engineering to LEO mega-constellations and 6G integration — a comprehensive technical analysis of the space-borne data fabric.</p>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span class="stat-num">6</span>
+            <span class="stat-label">Core Sections</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Orbital Regimes</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Gbps VHTS</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">6G</span>
+            <span class="stat-label">Integration Ready</span>
+          </div>
+        </div>
+        <a href="#introduction" class="cta-btn" onclick="navigateTo('introduction')">Begin Reading ↓</a>
+      </div>
+      <div class="hero-right">
+        <div class="hero-bg">
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <div class="orbit-ring ring-3"></div>
+          <div class="star-field" id="starField"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section id="introduction" class="section">
+      <div class="section-header" data-num="01">
+        <span class="section-tag">Section 01</span>
+        <h2 class="section-title">Introduction</h2>
+        <p class="section-sub">The evolution of satellite communication — from Sputnik to mega-constellations</p>
+      </div>
+      <div class="content-grid">
+        <div class="content-block full-width">
+          <p class="lead-text">The relentless demand for ubiquitous, high-throughput connectivity has positioned satellite communication as a cornerstone of modern global data infrastructure, transitioning from a niche technology for intercontinental trunking to a pervasive medium for direct-to-consumer broadband and machine-to-machine telemetry.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1957</div>
+            <div class="timeline-content">
+              <h4>Sputnik 1</h4>
+              <p>The geopolitical shockwave that validated Clarke's theoretical underpinnings, demonstrating the feasibility of bridging vast terrestrial distances via orbital mirrors.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1962</div>
+            <div class="timeline-content">
+              <h4>Telstar Launch</h4>
+              <p>Marked the commercial infancy of satellite communication, establishing geostationary orbit as premium real estate for fixed satellite services.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1965</div>
+            <div class="timeline-content">
+              <h4>Intelsat I (Early Bird)</h4>
+              <p>First commercial GEO satellite. Operated at C-band, facilitating transoceanic telephony and broadcast television distribution via large aperture earth stations.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1980s</div>
+            <div class="timeline-content">
+              <h4>VSAT Proliferation</h4>
+              <p>Very Small Aperture Terminals decentralized network topology, extending connectivity directly to enterprise premises and laying the groundwork for mesh architectures.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Today</div>
+            <div class="timeline-content">
+              <h4>LEO Mega-Constellations</h4>
+              <p>Thousands of cost-optimized nodes in low Earth orbit, operating at Ku and Ka-bands across 350–1,200 km altitudes, forming a self-healing distributed mesh network.</p>
+            </div>
+          </div>
+        </div>
+        <div class="info-box">
+          <h4>Key Paradigm Shift</h4>
+          <p>The physical immutability of the radio frequency spectrum and the ~250ms GEO latency created a performance ceiling incompatible with delay-intolerant applications such as real-time financial trading, cloud gaming, and immersive telepresence — precipitating the shift to non-geostationary orbit constellations.</p>
+        </div>
+        <div class="info-box highlight">
+          <h4>3GPP Integration</h4>
+          <p>Standardization efforts within 3GPP to incorporate non-terrestrial networks into the cellular ecosystem signal a future where a smartphone seamlessly roams between a terrestrial macro-cell and an orbital beam without session disruption.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL PRINCIPLES -->
+    <section id="technical" class="section">
+      <div class="section-header" data-num="02">
+        <span class="section-tag">Section 02</span>
+        <h2 class="section-title">Technical Principles</h2>
+        <p class="section-sub">Orbital mechanics, spectrum management, and signal modulation</p>
+      </div>
+      <div class="content-grid">
+
+        <!-- Orbital Regimes -->
+        <div class="content-block full-width">
+          <h3 class="block-title">2.1 Orbital Regimes</h3>
+        </div>
+        <div class="orbit-card geo">
+          <div class="orbit-card-header">
+            <span class="orbit-badge-small">GEO</span>
+            <h4>Geostationary Orbit</h4>
+            <span class="orbit-alt">~42,164 km</span>
+          </div>
+          <ul>
+            <li>Synchronizes with Earth's sidereal rotation — appears stationary</li>
+            <li>Simplifies ground-segment tracking to static high-gain antennas</li>
+            <li>239.6ms single-hop path delay — disqualifies latency-intolerant apps</li>
+            <li>Free-space path loss exceeds 200 dB at Ku-band</li>
+          </ul>
+        </div>
+        <div class="orbit-card meo">
+          <div class="orbit-card-header">
+            <span class="orbit-badge-small">MEO</span>
+            <h4>Medium Earth Orbit</h4>
+            <span class="orbit-alt">8,000–20,000 km</span>
+          </div>
+          <ul>
+            <li>Requires 10–24 spacecraft for global persistence</li>
+            <li>GPS, Galileo operate near 20,200 km semi-synchronous harmonic</li>
+            <li>Traverses high-energy proton flux of inner Van Allen belt</li>
+            <li>Requires radiation-hardened bus electronics and solar cells</li>
+          </ul>
+        </div>
+        <div class="orbit-card leo">
+          <div class="orbit-card-header">
+            <span class="orbit-badge-small">LEO</span>
+            <h4>Low Earth Orbit</h4>
+            <span class="orbit-alt">350–1,200 km</span>
+          </div>
+          <ul>
+            <li>30–40 dB less path loss than GEO — enables compact user terminals</li>
+            <li>Substantial time-varying Doppler shift — requires dynamic frequency correction</li>
+            <li>Satellite visibility windows collapse to minutes — needs ISL mesh</li>
+            <li>Keplerian element sets used to pre-compute ISL acquisition vectors</li>
+          </ul>
+        </div>
+
+        <!-- Spectrum -->
+        <div class="content-block full-width">
+          <h3 class="block-title">2.2 Frequency Spectrum Management</h3>
+        </div>
+        <div class="spectrum-table">
+          <div class="spectrum-row header">
+            <div>Band</div><div>Frequency</div><div>Key Advantage</div><div>Key Challenge</div>
+          </div>
+          <div class="spectrum-row c-band">
+            <div><strong>C-Band</strong></div>
+            <div>4–8 GHz</div>
+            <div>Exceptional rain fade resilience (99.99% availability)</div>
+            <div>Narrow spectrum; 5G terrestrial interference</div>
+          </div>
+          <div class="spectrum-row ku-band">
+            <div><strong>Ku-Band</strong></div>
+            <div>12–18 GHz</div>
+            <div>Higher antenna gain per aperture; DTH & mobile backhaul backbone</div>
+            <div>Rain attenuation up to 10 dB in tropical environments</div>
+          </div>
+          <div class="spectrum-row ka-band">
+            <div><strong>Ka-Band</strong></div>
+            <div>26.5–40 GHz</div>
+            <div>Broad contiguous segments for Tbps throughput</div>
+            <div>Rain fades 20–30 dB; requires Adaptive Coding & Modulation</div>
+          </div>
+        </div>
+
+        <!-- Modulation -->
+        <div class="content-block full-width">
+          <h3 class="block-title">2.3 Signal Modulation & Coding</h3>
+        </div>
+        <div class="mod-card">
+          <div class="mod-icon">QPSK</div>
+          <div class="mod-body">
+            <h4>Quadrature Phase Shift Keying</h4>
+            <p>Constant-envelope characteristic suits non-linear high-power amplifiers. Angular separation of π/2 radians provides substantial Euclidean distance. Baseline mode for network acquisition and robust telemetry streams.</p>
+            <span class="mod-spec">2 bits/symbol · Low E_b/N_0 · BER floor 10⁻⁹</span>
+          </div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-icon">APSK</div>
+          <div class="mod-body">
+            <h4>Amplitude & Phase Shift Keying</h4>
+            <p>16-APSK and 32-APSK per DVB-S2X standard. Points on concentric circular shells minimize peak-to-average power ratio vs. square QAM grids. 64-QAM and 256-QAM reach up to 8 bits/symbol in high-SNR scenarios.</p>
+            <span class="mod-spec">Up to 8 bits/symbol · Sensitive to phase noise · High spectral efficiency</span>
+          </div>
+        </div>
+        <div class="mod-card full-width">
+          <div class="mod-icon">LDPC</div>
+          <div class="mod-body">
+            <h4>Low-Density Parity Check + BCH Concatenation</h4>
+            <p>Operates within fractions of a dB of the Shannon limit. Receiver synthesizes a metric from constellation dispersion and EVM to signal the ACM scheduler. DVB-S2X defines 116 modulation and coding combinations providing quasi-continuous adaptation.</p>
+            <span class="mod-spec">Near-Shannon performance · Adaptive loop · Fractions of dB from theoretical limit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HTS & BEAMFORMING -->
+    <section id="hts" class="section">
+      <div class="section-header" data-num="03">
+        <span class="section-tag">Section 03</span>
+        <h2 class="section-title">HTS & Spatial Beamforming</h2>
+        <p class="section-sub">The physics of frequency reuse and high-throughput satellite architecture</p>
+      </div>
+      <div class="content-grid">
+        <div class="content-block full-width">
+          <p class="lead-text">High-Throughput Satellites abandon the broad quasi-static continental beam in favor of a cellularized footprint — achieving geometric multiplication of capacity without expanding licensed spectrum.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-num">01</div>
+          <h4>Spot Beam Architecture</h4>
+          <p>Multi-feed reflector geometries in the focal plane of large aperture reflectors (exceeding 5m diameter for GEO Ka-band). Beamwidth defined by θ_3dB ≈ 70λ/D. Tightly packed overlapping beams with steep roll-off at intersection boundaries — typically targeting a 4 dB contour at cell edge.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">02</div>
+          <h4>Satellite Zooming</h4>
+          <p>EIRP concentrated into a smaller solid angle. Gain differential between spot and wide beam manifests as elevated C/N at the user terminal — traded for higher-order modulation rather than burned as excess margin. A Ka-band HTS spot beam achieves 48–52 dBi — nearly 20 dB over wide-beam equivalent.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">03</div>
+          <h4>Frequency Reuse</h4>
+          <p>Multi-color frequency plan (4-color or 7-color scheme). Adjacent beams assigned alternating sub-band segments and orthogonal polarizations. Cross-polarization discrimination exceeds 27 dB under clear-sky conditions. Reusing 500 MHz across 20 isolated beams multiplies effective throughput far beyond physical spectrum allocation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">04</div>
+          <h4>Dynamic Beam Steering</h4>
+          <p>Active Phased-Array Antennas (APAA) steer beams electronically without physical structure movement. Taylor or Chebyshev distributions applied to element weights create nulls in the radiation pattern, avoiding interference with neighboring terrestrial networks or satellites.</p>
+        </div>
+
+        <div class="comparison-block">
+          <div class="comp-side">
+            <h4>Wide-Beam</h4>
+            <div class="comp-metric bad">~30 dBi antenna gain</div>
+            <div class="comp-metric bad">Continental coverage area</div>
+            <div class="comp-metric bad">Conservative QPSK ½ mode</div>
+            <div class="comp-metric bad">No frequency reuse</div>
+            <div class="comp-metric bad">Low spectral efficiency</div>
+          </div>
+          <div class="comp-vs">VS</div>
+          <div class="comp-side good">
+            <h4>Spot-Beam (HTS)</h4>
+            <div class="comp-metric good">48–52 dBi antenna gain</div>
+            <div class="comp-metric good">Targeted cell coverage</div>
+            <div class="comp-metric good">64-APSK / 256-APSK mode</div>
+            <div class="comp-metric good">Aggressive frequency reuse</div>
+            <div class="comp-metric good">4–6 bits/s/Hz efficiency</div>
+          </div>
+        </div>
+
+        <div class="info-box full-width">
+          <h4>VHTS Throughput</h4>
+          <p>Third-generation Very High-Throughput Satellites utilizing full-duplex Ka-band user links and Q/V-band feeder links routinely achieve ground-verified hemispheric throughput exceeding <strong>500 Gbps</strong>, with theoretical scaling into the Tbps regime as gateway diversity and advanced precoding nullify feeder link bottlenecks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARATIVE ANALYSIS -->
+    <section id="comparison" class="section">
+      <div class="section-header" data-num="04">
+        <span class="section-tag">Section 04</span>
+        <h2 class="section-title">Comparative Analysis</h2>
+        <p class="section-sub">Satellite vs. terrestrial data communication architectures</p>
+      </div>
+      <div class="content-grid">
+        <div class="content-block full-width">
+          <p class="lead-text">The binary framing of satellite versus terrestrial obscures a more nuanced reality — these technologies are not antagonists but symbiotic layers in a resilient, multi-tiered connectivity stack.</p>
+        </div>
+
+        <div class="compare-card latency">
+          <h3>⏱ Latency</h3>
+          <div class="compare-items">
+            <div class="compare-item"><span class="label">5G (URLLC)</span><span class="value good">1–10 ms</span></div>
+            <div class="compare-item"><span class="label">Terrestrial Fiber</span><span class="value good">~5 µs/km</span></div>
+            <div class="compare-item"><span class="label">LEO Mesh (cross-continental)</span><span class="value ok">&lt;40 ms RTT</span></div>
+            <div class="compare-item"><span class="label">MEO</span><span class="value ok">120–180 ms RTT</span></div>
+            <div class="compare-item"><span class="label">GEO Single-Hop</span><span class="value bad">239 ms (one-way)</span></div>
+            <div class="compare-item"><span class="label">GEO Double-Hop</span><span class="value bad">478 ms RTT</span></div>
+          </div>
+        </div>
+
+        <div class="compare-card reach">
+          <h3>🌍 Geographic Reach</h3>
+          <p class="compare-desc">Satellite's most compelling advantage — intrinsic immunity to terrestrial geography. Key exclusive domains:</p>
+          <ul class="domain-list">
+            <li><strong>Maritime:</strong> Beyond coastal VHF/4G range — no alternative for safety-of-life systems</li>
+            <li><strong>Aeronautical:</strong> Transoceanic routes — exclusive medium where ground networks lack surface infrastructure</li>
+            <li><strong>Rural/Remote:</strong> Below ~200 premises/km² with fiber backhaul exceeding 5km — satellite delivers superior total cost of ownership</li>
+          </ul>
+        </div>
+
+        <div class="compare-card deployment">
+          <h3>🚀 Deployment Speed</h3>
+          <p class="compare-desc">A LEO mega-constellation can activate a customer terminal anywhere within its global coverage envelope <strong>within hours</strong> of ground equipment deployment — no trenching, no permits, no spectrum auctions tied to local geography.</p>
+          <p class="compare-desc">Critical in disaster response where terrestrial infrastructure is destroyed and a communications bridge must be established within the humanitarian response window.</p>
+        </div>
+
+        <div class="compare-card cost">
+          <h3>💰 Cost Structure</h3>
+          <div class="cost-compare">
+            <div class="cost-side">
+              <h5>Terrestrial Fiber</h5>
+              <p>High upfront CAPEX scaling linearly with distance. Near-zero marginal subscriber cost in dense corridors. Economically dominant above ~200 premises/km².</p>
+            </div>
+            <div class="cost-side sat">
+              <h5>Satellite</h5>
+              <p>Upfront cost largely independent of subscriber count. Marginal cost = user terminal only. Economically compelling in sparse geographies. Finite spacecraft life (5–15 years) demands replenishment capital.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box full-width highlight">
+          <h4>Synthesis: Converged Architecture</h4>
+          <p>3GPP Release 17 and beyond integrates satellite backhaul as a native component of the cellular protocol stack — enabling a smartphone to roam across GEO, LEO, and terrestrial macro-cells without session re-establishment. The intelligent edge router selects the path satisfying the application-layer QoS policy, whether traversing fiber or a laser cross-link in low Earth orbit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRITICAL CHALLENGES -->
+    <section id="challenges" class="section">
+      <div class="section-header" data-num="05">
+        <span class="section-tag">Section 05</span>
+        <h2 class="section-title">Critical Challenges</h2>
+        <p class="section-sub">Atmospheric, latency, debris, and cybersecurity constraints</p>
+      </div>
+      <div class="content-grid">
+
+        <div class="challenge-card rain">
+          <div class="challenge-icon">🌧</div>
+          <h3>Atmospheric Attenuation & Rain Fade</h3>
+          <p>Attenuation coefficient γ_R = kR^α (power-law of rain rate R). In tropical regions with rates exceeding 50 mm/h, Ka-band links experience excursions exceeding <strong>20 dB</strong> — a thousand-fold reduction in received power.</p>
+          <div class="mitigation">
+            <h5>Mitigations</h5>
+            <ul>
+              <li>Uplink Power Control (ULPC) — monitors downlink beacon, dynamically scales EIRP</li>
+              <li>Site Diversity — geographically separated gateways 30–50 km apart, switched in real-time</li>
+              <li>Adaptive Coding & Modulation (ACM) — DVB-S2X defines 116 modcod combinations, descends from 64-APSK 9/10 to QPSK ½ during deep fades</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="challenge-card latency-challenge">
+          <div class="challenge-icon">⏰</div>
+          <h3>Latency Across Orbital Regimes</h3>
+          <p>GEO's 480–600 ms RTT degrades TCP congestion control — delayed ACKs interpreted as packet loss, triggering spurious retransmissions. PEPs (Performance-Enhancing Proxies) terminate TCP at gateway and spoof acknowledgments — but break end-to-end integrity, incompatible with QUIC/TLS 1.3.</p>
+          <div class="mitigation">
+            <h5>LEO-Specific Challenge</h5>
+            <p>Latency jitter from shifting path geometry. Mitigation: ISL mesh with Dijkstra-like algorithms on a dynamic 3D graph. Key challenge: routing convergence time during ISL handover to avoid micro-loops and transient black holes.</p>
+          </div>
+        </div>
+
+        <div class="challenge-card debris">
+          <div class="challenge-icon">☄️</div>
+          <h3>Orbital Debris & Kessler Syndrome</h3>
+          <p>Donald Kessler (1978) theorized a critical spatial density triggering self-sustaining collisional cascade — rendering orbital shells unusable for centuries. IADC indicates several LEO altitude bands are approaching or exceeding the instability threshold.</p>
+          <div class="mitigation">
+            <h5>Mitigation Layers</h5>
+            <ul>
+              <li>Prevention: IADC 25-year post-mission disposal rule</li>
+              <li>Avoidance: Autonomous collision avoidance ingesting U.S. Space Surveillance Network conjunction data</li>
+              <li>Remediation: Harpoon capture, net entanglement, drag-augmentation sails (still technically immature)</li>
+              <li>Critical gap: No binding international treaty — tragedy-of-the-commons incentive structure</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="challenge-card cyber">
+          <div class="challenge-icon">🔒</div>
+          <h3>Cybersecurity Vulnerabilities</h3>
+          <p>IP-based telemetry interfaces and COTS processing components have expanded the attack surface. Threats include command injection into the T&C link, man-in-the-middle interception, DDoS on gateway infrastructure, and supply-chain compromises.</p>
+          <div class="mitigation">
+            <h5>Defenses & Future-Proofing</h5>
+            <ul>
+              <li>CCSDS Space Data Link Security Protocol — authenticated encryption of telecommand frames</li>
+              <li>IPsec, TLS 1.3, AES-256-GCM end-to-end across the space segment</li>
+              <li>Post-Quantum Cryptography (lattice-based) against quantum computing threats to RSA/ECC</li>
+              <li>Zero-Trust Architecture — every packet continuously authenticated, no implicit trust from gateways</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FUTURE TRENDS -->
+    <section id="future" class="section">
+      <div class="section-header" data-num="06">
+        <span class="section-tag">Section 06</span>
+        <h2 class="section-title">Future Trends</h2>
+        <p class="section-sub">6G integration, AI autonomy, optical ISLs, and software-defined satellites</p>
+      </div>
+      <div class="content-grid">
+        <div class="content-block full-width">
+          <p class="lead-text">Four convergent technological vectors are jointly redefining the capability envelope of space-borne data infrastructure — constituting a qualitative phase transition from static pre-provisioned capacity to an adaptive, intelligent, and deeply networked layer within the global 6G fabric.</p>
+        </div>
+
+        <div class="future-card">
+          <div class="future-num">I</div>
+          <div class="future-body">
+            <h3>6G & Non-Terrestrial Network Integration</h3>
+            <p>3GPP Releases 17–19 formally incorporate NTN as integral to 5G-Advanced and 6G. Satellite payload functions as a distributed gNodeB within the Open RAN framework. Unified OFDM waveform with extended numerology to accommodate LEO Doppler shifts. Network slicing extends end-to-end across the space segment — simultaneously serving IoT sensors, maritime broadband, and URLLC vessel telecommand on isolated QoS guarantees.</p>
+          </div>
+        </div>
+
+        <div class="future-card">
+          <div class="future-num">II</div>
+          <div class="future-body">
+            <h3>AI & Machine Learning in Autonomous Operations</h3>
+            <p>Deep Reinforcement Learning schedulers for beam hopping — learning a policy mapping queue backlogs and channel conditions to beam activation decisions, outperforming round-robin and weighted-fair-queue baselines. Onboard inference accelerators in radiation-tolerant FPGAs execute ML models at the orbital edge, reducing latency and backhaul cost of raw telemetry. Applications: predictive maintenance, anomaly detection in telemetry streams, automated interference classification.</p>
+          </div>
+        </div>
+
+        <div class="future-card">
+          <div class="future-num">III</div>
+          <div class="future-body">
+            <h3>Optical Inter-Satellite Links & Mesh Topology</h3>
+            <p>Wavelength-division multiplexing over laser terminals providing 100 Gbps–1 Tbps across thousands of km in the LEO shell. The vacuum eliminates atmospheric scintillation and absorption, enabling extremely narrow beam divergence and high link margins. SDN controllers compute optimal forwarding paths on a dynamic 3D graph, enabling end-to-end routing entirely within the space layer — bypassing terrestrial fiber's geopolitical chokepoints and latency inflation.</p>
+          </div>
+        </div>
+
+        <div class="future-card">
+          <div class="future-num">IV</div>
+          <div class="future-body">
+            <h3>Software-Defined & Flexible Payload Satellites</h3>
+            <p>Digital transparent processors replace analog filter-and-amplify chains with flexible DSP pipelines with kilohertz spectral granularity. Active phased-array antennas with hundreds of individually controlled radiating elements achieve true beam agility — concentrating capacity onto a disaster zone, redirecting away from compromised geography, or tracking a launch vehicle through ascent. The payload resource pool becomes a virtualized commodity allocated by NFV orchestration analogous to terrestrial cloud data centers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">About the Author</h2>
+        <p class="section-sub">Student researcher and paper author</p>
+      </div>
+      <div class="about-container">
+        <div class="profile-card">
+          <!-- Black header strip -->
+          <div class="profile-card-top">
+            <div class="profile-pic" id="profilePic">
+              <img id="profileImg" src="" alt="Profile Photo" style="display:none;" />
+              <div class="profile-placeholder" id="profilePlaceholder">
+                <span>👤</span>
+                <p>No Photo</p>
+              </div>
+            </div>
+            <div class="profile-header-info">
+              <h2>Agbasah Phaney Martha</h2>
+              <p>PUIS/24210022 · Industrial Software Engineering</p>
+              <p>Pentecost University</p>
+              <div class="accent-tag">Student Researcher</div>
+              <label class="profile-upload-btn" for="profileUpload" id="uploadBtn" style="display:none;">
+                <span>📷</span> Change Photo
+              </label>
+              <input type="file" id="profileUpload" accept="image/*" style="display:none;" />
+            </div>
+          </div>
+          <!-- White body -->
+          <div class="profile-body">
+            <div class="profile-grid">
+              <div class="profile-field">
+                <label>Email</label>
+                <div class="static-field">phaneyphaney84@gmail.com</div>
+              </div>
+              <div class="profile-field">
+                <label>Programme</label>
+                <div class="static-field">Industrial Software Engineering</div>
+              </div>
+              <div class="profile-field">
+                <label>Institution</label>
+                <div class="static-field">Pentecost University</div>
+              </div>
+              <div class="profile-field">
+                <label>Student ID</label>
+                <div class="static-field">PUIS/24210022</div>
+              </div>
+              <div class="profile-field full-col">
+                <label>About Me</label>
+                <div class="static-field bio-static">Agbasah Phaney Martha is an enthusiastic Industrial Software Engineering student at Pentecost University, with a natural flair for problem-solving and a genuine passion for the intersection of technology and human connectivity. Curious by nature and detail-oriented by practice, Martha brings both creativity and technical rigour to her academic work. Her exploration of satellite communication systems reflects her growing interest in the networks and infrastructures that silently power the modern digital world — and her determination to be part of the next generation of engineers who shape it.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACKNOWLEDGEMENTS -->
+    <section id="acknowledgements" class="section">
+      <div class="section-header">
+        <span class="section-tag">Acknowledgements</span>
+        <h2 class="section-title">Acknowledgements</h2>
+        <p class="section-sub">With gratitude to those who made this research possible</p>
+      </div>
+      <div class="ack-container">
+
+        <div class="ack-card">
+          <div class="ack-card-header orange">
+            <span class="ack-icon">🎓</span>
+            <h3>Course Lecturer</h3>
+          </div>
+          <div class="ack-body">
+            <div class="lecturer-name-static">Dr. Harry Atieku Boateng</div>
+            <div class="lecturer-dept-static">Faculty of Engineering, Science and Computing — Pentecost University</div>
+            <p class="ack-msg">I wish to extend my deepest and most sincere appreciation to Dr. Harry Atieku Boateng of the Faculty of Engineering, Science and Computing at Pentecost University, for his remarkable dedication to teaching and his genuine investment in the growth of his students. His ability to break down intricate engineering concepts into clear, digestible knowledge has been invaluable throughout this course. The completion of this research paper stands as a testament to the quality of instruction and encouragement he consistently provides. I am truly honoured to have been guided by such a knowledgeable and supportive lecturer.</p>
+          </div>
+        </div>
+
+        <div class="ack-card">
+          <div class="ack-card-header">
+            <span class="ack-icon">🏛</span>
+            <h3>Institution</h3>
+          </div>
+          <div class="ack-body">
+            <div class="lecturer-name-static">Pentecost University</div>
+            <p class="ack-msg">I am sincerely thankful to Pentecost University for fostering an academic environment that encourages intellectual curiosity and scholarly excellence. The research tools, digital resources, and institutional support made available to students have been instrumental in the development of this paper. Access to key technical literature — spanning IEEE publications, ITU Radio Regulations, and 3GPP specifications — made it possible to engage with this subject at a level of depth befitting the discipline.</p>
+          </div>
+        </div>
+
+        <div class="ack-card">
+          <div class="ack-card-header">
+            <span class="ack-icon">📚</span>
+            <h3>Key References & Standards Bodies</h3>
+          </div>
+          <div class="ack-body">
+            <p class="ack-msg">This paper draws extensively on the technical standards and academic contributions of the <strong>International Telecommunication Union (ITU)</strong>, the <strong>3rd Generation Partnership Project (3GPP)</strong>, the <strong>European Telecommunications Standards Institute (ETSI)</strong>, and the <strong>Consultative Committee for Space Data Systems (CCSDS)</strong>. The scholars and researchers referenced throughout — from foundational astrodynamics to contemporary LEO constellation analysis — collectively form the intellectual backbone of this work.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section id="references" class="section">
+      <div class="section-header" data-num="07">
+        <span class="section-tag">Section 07</span>
+        <h2 class="section-title">References</h2>
+        <p class="section-sub">Standards bodies, academic sources, and technical literature cited in this paper</p>
+      </div>
+      <div class="content-grid">
+
+        <div class="content-block full-width">
+          <p class="lead-text">All technical claims in this paper are grounded in peer-reviewed literature, international telecommunications standards, and specifications published by recognised standards bodies.</p>
+        </div>
+
+        <!-- Standards & Regulatory -->
+      
+
+        <div class="info-box">
+          <h4>[1] Term Paper</h4>
+          <p><a href="https://docs.google.com/document/d/1aNK9U2JEVNmS4_vu9Yp1UQrY9ksIW50W/edit?usp=drivesdk&ouid=107845499659114441047&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">View Term Paper (Google Docs) ↗</a></p>
+        </div>
+        <!-- Standards Resources -->
+        <div class="content-block full-width">
+          <h3 class="block-title">Additional Standards Consulted</h3>
+        </div>
+
+        <div class="info-box highlight full-width">
+          <h4>Further Technical Standards</h4>
+          <p>
+            <strong>CCSDS 355.0-B-2</strong> — Space Data Link Security (SDLS) Protocol, Blue Book Issue 2, 2021. Authenticated encryption for telecommand frames.<br><br>
+            <strong>CCSDS 131.0-B-3</strong> — TM Synchronization and Channel Coding, Blue Book Issue 3, 2017. LDPC + BCH concatenation scheme referenced in Section 2.<br><br>
+            <strong>IADC-2002-01 Rev 4</strong> — IADC Space Debris Mitigation Guidelines, Inter-Agency Space Debris Coordination Committee, 2007. Defines the 25-year post-mission disposal rule discussed in Section 5.<br><br>
+            <strong>ITU-R P.618-13</strong> — Propagation data and prediction methods required for Earth–space telecommunications systems, 2017. Rain attenuation power-law model used in link budget calculations in Section 5.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
