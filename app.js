@@ -2,7 +2,8 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.section');
 const hamburger = document.getElementById('hamburger');
-const mobileNav = document.getElementById('mobileNav');
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
 
 function navigateTo(sectionId) {
   sections.forEach(s => s.classList.remove('active-section'));
@@ -14,8 +15,9 @@ function navigateTo(sectionId) {
   const activeLinks = document.querySelectorAll(`[data-section="${sectionId}"]`);
   activeLinks.forEach(l => l.classList.add('active'));
 
-  // Close mobile nav
-  mobileNav.classList.remove('open');
+  // Close sidebar on mobile
+  sidebar.classList.remove('open');
+  sidebarOverlay.classList.remove('active');
   hamburger.classList.remove('open');
 
   window.scrollTo(0, 0);
@@ -41,10 +43,18 @@ document.querySelector('.header-logo')?.addEventListener('click', e => {
   navigateTo('home');
 });
 
-// Hamburger toggle
+// Hamburger toggle (opens sidebar on mobile)
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
-  mobileNav.classList.toggle('open');
+  sidebar.classList.toggle('open');
+  sidebarOverlay.classList.toggle('active');
+});
+
+// Close sidebar when overlay is tapped
+sidebarOverlay.addEventListener('click', () => {
+  hamburger.classList.remove('open');
+  sidebar.classList.remove('open');
+  sidebarOverlay.classList.remove('active');
 });
 
 // ============ STAR FIELD ============
@@ -104,9 +114,9 @@ function loadSavedData() {
   const savedPhoto = localStorage.getItem('marthaProfilePhoto');
   if (savedPhoto) {
     profileImg.src = savedPhoto;
-    profileImg.style.display = 'block';
-    profilePlaceholder.style.display = 'none';
   }
+  profileImg.style.display = 'block';
+  profilePlaceholder.style.display = 'none';
 }
 
 loadSavedData();
